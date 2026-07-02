@@ -1,0 +1,6 @@
+interface:
+  display_name: "Qualification Standard Generator"
+  short_description: "生成岗位任职资格标准初稿"
+  default_prompt: "Use $qualification-standard-generator to generate a company岗位任职资格标准初稿 from standardized岗位信息."
+policy:
+  allow_implicit_invocation: true

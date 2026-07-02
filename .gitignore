@@ -1,0 +1,8 @@
+.DS_Store
+
+# Local source materials. Keep these out of the install repo unless explicitly approved.
+任职资格参考标准/
+
+# Local notes and test output.
+AI-任职资格AI生成工具-0702阶段性建设笔记.md
+outputs/
