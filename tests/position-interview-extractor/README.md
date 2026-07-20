@@ -25,3 +25,4 @@ python3 tests/position-interview-extractor/check_runtime_contract.py
 | `sparse-level-transcript.md` | 稀疏职级证据与确认后的规则补充 | `sparse-level-checklist.md` |
 | `conflicting-boundary-transcript.md` | 表单与访谈的主责冲突 | `conflicting-boundary-checklist.md` |
 | `review-gate-regressions.md` | 补充授权、拒绝补充与非标准职级映射门禁 | `review-gate-regressions-checklist.md` |
+| `position-type-gate-regressions.md` | 管理岗位拒绝与岗位性质含糊时的前置阻断 | `position-type-gate-regressions-checklist.md` |
