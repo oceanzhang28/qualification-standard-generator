@@ -1,6 +1,6 @@
 # 文档索引
 
-本目录用于沉淀 `qualification-standard-generator` 的开发计划、材料准备要求和规则细化过程。
+本目录用于沉淀两个协作 Skill 的开发计划、材料准备要求和规则细化过程：`position-interview-extractor` 负责岗位访谈事实提炼，`qualification-standard-generator` 负责任职资格生成。
 
 ## 文件说明
 
@@ -10,6 +10,13 @@
 | `materials-checklist.md` | 用户需要提供的材料清单、案例信息模板和 Excel 模板要求 |
 | `rule-refinement-checklist.md` | 行为标准写法、职级差异、动作词和颗粒度问题的规则细化记录 |
 | `action-type-level-difference-template.md` | 通用工作类型与职级差异模式模板 |
+
+## 访谈提炼 Skill 设计与测试
+
+- [岗位关键任务访谈设计](superpowers/specs/2026-07-17-position-key-task-interview-design.md)
+- [访谈 Skill 交接设计](superpowers/specs/2026-07-20-interview-skill-handoff-design.md)
+- [岗位访谈提炼器实施计划](superpowers/plans/2026-07-20-position-interview-extractor.md)
+- [岗位访谈提炼器前测夹具](../tests/position-interview-extractor/README.md)
 
 ## 使用方式
 

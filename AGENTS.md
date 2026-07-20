@@ -4,7 +4,8 @@
 
 ## 项目范围
 
-- 本项目建设 `qualification-standard-generator` Skill。
+- 本项目建设两个协作的 Skill：`position-interview-extractor` 和 `qualification-standard-generator`。
+- `position-interview-extractor` 从岗位基本信息表和完整访谈转写稿中提炼可审核的岗位事实；只有经人工明确确认后，才可将清洁岗位信息包交给 `qualification-standard-generator`。
 - 目标是生成公司专业类岗位任职资格标准。
 - 不生成传统任职条件。
 - 不处理管理岗位任职资格体系。
@@ -33,6 +34,13 @@
 
 ## 重要文件
 
+- 岗位访谈提炼 Skill 入口：`position-interview-extractor/SKILL.md`
+- 岗位访谈输入要求：`position-interview-extractor/config/input_requirements.md`
+- 岗位访谈审核工作流：`position-interview-extractor/config/workflow.md`
+- 岗位关键任务提炼规则：`position-interview-extractor/rules/key_task_extraction_rules.md`
+- 岗位职级差异提炼规则：`position-interview-extractor/rules/level_difference_extraction_rules.md`
+- 岗位访谈输出模板：`position-interview-extractor/templates/fact_review_template.md`、`position-interview-extractor/templates/clean_handoff_template.md`
+- 岗位访谈 Skill 项目级测试：`tests/position-interview-extractor/README.md`
 - Skill 入口：`qualification-standard-generator/SKILL.md`
 - 用户输入表单：`qualification-standard-generator/config/user_input_form.md`
 - 工作流程：`qualification-standard-generator/config/skill_workflow.md`
