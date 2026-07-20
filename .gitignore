@@ -6,3 +6,6 @@
 # Local notes and test output.
 AI-任职资格AI生成工具-0702阶段性建设笔记.md
 outputs/
+
+# Local isolated development worktrees.
+.worktrees/
