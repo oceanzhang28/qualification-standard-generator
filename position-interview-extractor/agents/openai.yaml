@@ -1,0 +1,4 @@
+interface:
+  display_name: "岗位访谈提炼"
+  short_description: "从岗位访谈转写中提炼可审核的岗位关键任务与职级差异"
+  default_prompt: "使用 $position-interview-extractor 整理这份岗位基本信息和访谈转写稿，先输出岗位事实审核稿。"
