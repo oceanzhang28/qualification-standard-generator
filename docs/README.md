@@ -20,6 +20,13 @@
 
 ## 使用方式
 
-- 新增规则时，先更新对应规则文档，再同步到 `qualification-standard-generator/rules/` 或 `qualification-standard-generator/references/`。
+- 新增规则时，先确认它属于访谈事实提炼还是任职资格生成，再更新 `position-interview-extractor/` 或 `qualification-standard-generator/` 下对应的规则、提示词与模板；不在两个 Skill 之间复制职责。
 - 新增案例时，先补充 `materials-checklist.md` 中的案例质量判断，再运行转换脚本生成案例库。
 - 测试输出暴露的问题，应回写到规则或提示词，避免只修单次生成结果。
+
+结构或交接契约变更后运行：
+
+```bash
+find position-interview-extractor qualification-standard-generator -maxdepth 3 -type f | sort
+python3 tests/position-interview-extractor/check_runtime_contract.py
+```

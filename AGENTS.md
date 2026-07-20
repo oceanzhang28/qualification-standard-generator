@@ -55,10 +55,11 @@
 
 ## 验证建议
 
-修改 Skill 规则或提示词后，至少检查：
+修改任一 Skill 的规则或提示词后，至少检查两个 Skill 的运行文件；修改访谈提炼 Skill 时同时运行其项目级契约测试：
 
 ```bash
-find qualification-standard-generator -maxdepth 3 -type f | sort
+find position-interview-extractor qualification-standard-generator -maxdepth 3 -type f | sort
+python3 tests/position-interview-extractor/check_runtime_contract.py
 ```
 
 转换案例库后，检查：
@@ -70,7 +71,7 @@ python3 qualification-standard-generator/scripts/excel_to_markdown_converter.py
 生成或修改 Markdown 文档后，检查相对时间、旧数量和过时描述：
 
 ```bash
-rg -n "5 个成熟|五个成熟|相对时间|旧数量" README.md AGENTS.md docs qualification-standard-generator
+rg -n "5 个成熟|五个成熟|相对时间|旧数量" README.md AGENTS.md docs position-interview-extractor qualification-standard-generator tests/position-interview-extractor
 ```
 
 ## 输出偏好

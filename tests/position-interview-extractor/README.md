@@ -11,6 +11,12 @@
 5. 单独验证清洁岗位信息包：只有达到确认门槛的场景才能交接，且交接内容须符合对应清单。
 6. 除非生成结果暴露可稳定复现的回归问题，否则不要提交临时生成的测试输出。
 
+每次修改审核门禁或交接格式后，先运行：
+
+```bash
+python3 tests/position-interview-extractor/check_runtime_contract.py
+```
+
 ## 夹具索引
 
 | 夹具 | 关注点 | 对应清单 |
@@ -18,3 +24,4 @@
 | `complete_mixed-level-transcript.md` | 任务去重、范围边界、三层职级差异 | `complete-mixed-level-checklist.md` |
 | `sparse-level-transcript.md` | 稀疏职级证据与确认后的规则补充 | `sparse-level-checklist.md` |
 | `conflicting-boundary-transcript.md` | 表单与访谈的主责冲突 | `conflicting-boundary-checklist.md` |
+| `review-gate-regressions.md` | 补充授权、拒绝补充与非标准职级映射门禁 | `review-gate-regressions-checklist.md` |

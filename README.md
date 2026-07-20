@@ -65,32 +65,50 @@
 python3 qualification-standard-generator/scripts/excel_to_markdown_converter.py
 ```
 
-核对 Skill 引用文件是否存在：
+核对两个 Skill 的运行文件和主要引用是否存在：
 
 ```bash
+find position-interview-extractor qualification-standard-generator -maxdepth 3 -type f | sort
+
 python3 - <<'PY'
 from pathlib import Path
-root = Path("qualification-standard-generator")
-skill = (root / "SKILL.md").read_text(encoding="utf-8")
-for path in [
-    "config/user_input_form.md",
-    "config/output_format.md",
-    "config/skill_workflow.md",
-    "rules/qualification_definition.md",
-    "rules/module_item_decomposition_rules.md",
-    "rules/behavior_standard_writing_rules.md",
-    "rules/level_difference_rules.md",
-    "rules/mece_rules.md",
-    "rules/validation_and_revision_rules.md",
-    "prompts/01_intake_prompt.md",
-    "prompts/02_framework_generation_prompt.md",
-    "prompts/03_behavior_standard_generation_prompt.md",
-    "prompts/04_validation_revision_prompt.md",
-    "prompts/05_output_formatting_prompt.md",
-]:
-    assert (root / path).exists(), path
+
+required = {
+    Path("position-interview-extractor"): [
+        "config/input_requirements.md",
+        "config/workflow.md",
+        "references/interview_guide.md",
+        "rules/key_task_extraction_rules.md",
+        "rules/level_difference_extraction_rules.md",
+        "rules/validation_rules.md",
+        "templates/fact_review_template.md",
+        "templates/clean_handoff_template.md",
+    ],
+    Path("qualification-standard-generator"): [
+        "config/user_input_form.md",
+        "config/output_format.md",
+        "config/skill_workflow.md",
+        "rules/qualification_definition.md",
+        "rules/module_item_decomposition_rules.md",
+        "rules/behavior_standard_writing_rules.md",
+        "rules/level_difference_rules.md",
+        "rules/mece_rules.md",
+        "rules/validation_and_revision_rules.md",
+        "prompts/01_intake_prompt.md",
+        "prompts/02_framework_generation_prompt.md",
+        "prompts/03_behavior_standard_generation_prompt.md",
+        "prompts/04_validation_revision_prompt.md",
+        "prompts/05_output_formatting_prompt.md",
+    ],
+}
+for root, paths in required.items():
+    assert (root / "SKILL.md").is_file(), root / "SKILL.md"
+    for path in paths:
+        assert (root / path).is_file(), root / path
 print("OK")
 PY
+
+python3 tests/position-interview-extractor/check_runtime_contract.py
 ```
 
 ## 下一步
