@@ -48,7 +48,8 @@
 - 职级差异规则：`qualification-standard-generator/rules/level_difference_rules.md`
 - 通用工作类型差异：`qualification-standard-generator/references/writing_examples/work_type_level_patterns.md`
 - 案例库报告：`qualification-standard-generator/references/case_library/conversion_report.md`
-- 开发计划：`docs/implementation-plan.md`
+- 任职资格生成 Skill v0.1 历史实施计划：`docs/implementation-plan.md`
+- 双 Skill 当前使用指南：`docs/two-skill-workflow.md`
 - 材料清单：`docs/materials-checklist.md`
 - 规则细化记录：`docs/rule-refinement-checklist.md`
 - 阶段笔记：本地 Obsidian 文件，不随安装仓库发布

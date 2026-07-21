@@ -39,9 +39,11 @@
 | `qualification-standard-generator/templates/` | 阶段一、阶段二、TSV 和校验报告模板 |
 | `qualification-standard-generator/references/` | 职位图谱、案例库、写法示例和待补充清单 |
 | `qualification-standard-generator/scripts/` | Excel 到 Markdown 案例库转换脚本 |
-| `docs/` | 开发计划、材料清单和规则细化文档 |
+| `docs/` | 双 Skill 使用指南、维护资料和历史设计归档 |
 | `outputs/` | 本地测试输出，不随安装仓库发布 |
 | `任职资格参考标准/` | 本地源 Excel 案例和职位图谱，不随安装仓库发布 |
+
+首次使用两个 Skill 时，请从 [`docs/two-skill-workflow.md`](docs/two-skill-workflow.md) 开始。该文档说明访谈材料如何经过人工审核，再交给任职资格生成 Skill。
 
 ## 案例库
 
